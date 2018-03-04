@@ -2,7 +2,15 @@ JS Data Structure References
 ----------------------------
 
 Stacks: LIFO
+    -> used for backtracking problems to remember tasks or paths visited, and to undo actions
+    * decimal to binary problem
+    * the balanced parenthesis problem
+    * the tower of Hanoi problem
+
+
+
 Queues: FIFO
+
 
 Sets: unique sequential [key, key]
 Maps/Dictionaries: [key, value]
