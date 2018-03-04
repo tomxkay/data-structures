@@ -1,3 +1,6 @@
+// [key, key]
+// store elements in an Object
+
 function Set() {
   let items = {};
 

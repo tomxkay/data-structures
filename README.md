@@ -20,9 +20,10 @@ Queues: FIFO (First In First Out)
 
 
 Linked-lists: consists of nodes that point a reference to the next element; advantage over an array is that you can easily add/remove elements without shifting over its elements.
-Doubly-linked-list:
-Circular-linked-list:
-Doubly-circular-linked-list:
+Variations: 
+* doubly
+* circular
+* doubly circular
 
 
 
@@ -39,7 +40,8 @@ Sets: unordered, unique sequential data structure -- DOES NOT ALLOW DUPLICATES V
 
 
 Maps/Dictionaries: [key, value]
-Hashes/Hashe Tables/Hash Maps: constant time look-up 
+Hashes/HasheTables/HashMaps: constant time look-up 
+- handle hashTable collision with linear probing or linked list implementation
 
 
 
