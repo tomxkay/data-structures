@@ -1,0 +1,8 @@
+ES6 Map class values and keys methods return an Iterator; it has a size property and a delete method.
+
+The difference between the Map or Set classes and their Weak versions are:
+   * The WeakSet or WeakMap classes do not have the entries, keys, and values methods (essentially, they don't have methods that returns an Iterator)
+   * It is only possible to use Objects as a key for the weak versions.
+
+The reason for creating and using the weak variants are performance related.
+
