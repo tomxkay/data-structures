@@ -40,7 +40,7 @@ Sets: unordered, unique sequential data structure -- DOES NOT ALLOW DUPLICATES V
 
 
 Maps/Dictionaries: [key, value]
-Hashes/HasheTables/HashMaps: constant time look-up 
+Hashes/HasheTables/HashMaps: constant time look-up (NON-SEQUENTIAL)
 - handle hashTable collision with linear probing or linked list implementation
 
 
@@ -54,7 +54,15 @@ WeakMaps/WeakSets: similar to their non-Weak conterparts with omited iterator me
 
 
 Trees: non-sequential data structure that is useful for storing information that need to be found easily; hiearchyal relationship;
+Tree traversal:
+* In-order traversal
+* Pre-order traversal: visits the node prior to its descendants
+* Post-order traversal: visits the node after it visits its descendants
 
+Searching for values in a tree
+* Searching for the min value
+* Searching for the max value
+* Searching for a specific value
 
 
 
