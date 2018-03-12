@@ -11,7 +11,6 @@ function List() {
   this.remove = remove;
   this.front = front;
   this.end = end;
-  this.front = front;
   this.prev = prev;
   this.next = next;
   this.length = length;
@@ -22,10 +21,12 @@ function List() {
   this.contains = contains;
 }
 
+// append: adding an elemen to a list
 function append(element) {
   this.dataStore[this.listSize++] = element;
 }
 
+// find: finding an element in a list
 function find(element) {
   for (let i = 0; i < this.dataStore.length; ++i) {
     if (this.dataStore[i] === element) {
@@ -36,9 +37,10 @@ function find(element) {
   return -1;
 }
 
+// remove: removing an element from a list
 // the remove() function uses the position returned by find() to splice the dataStore array at that place.
 function remove(element) {
-  let foundAt = this.find(element);
+  var foundAt = this.find(element);
 
   if (foundAt > -1) {
     this.dataStore.splice(foundAt, 1);
@@ -49,14 +51,17 @@ function remove(element) {
   return false;
 }
 
+// length: determining the number of elements in a list
 function length() {
   return this.listSize;
 }
 
+// toString: retrieving a list's elements
 function toString() {
   return this.dataStore; // returns an array, providing a view of the current state of an object
 }
 
+// insert: inserting an element into a list
 function insert(element, after) {
   let insertPos = this.find(after);
   if (insertPos > -1) {
@@ -68,12 +73,14 @@ function insert(element, after) {
   return false;
 }
 
+// clear: removing all elements from a list
 function clear() {
   delete this.dataStore;
   this.dataStore = [];
   this.listSize = this.pos = 0;
 }
 
+// contains: determining if a given value is in a list
 function contains(element) {
   for (let i = 0; i < this.dataStore.length; ++i) {
     if (this.dataStore[i] === element) {
@@ -100,7 +107,7 @@ function prev() {
 }
 
 function next() {
-  if (this.pos < this.listSize -1) {
+  if (this.pos < this.listSize) {          // not too sure if it should be              if (this.pos < this.listSize -1) {}
     ++this.pos;
   }
 }
@@ -128,7 +135,19 @@ let names = new List();
 names.append('Cynthia');
 names.append('Raymond');
 names.append('Barbara');
-console.log(names.toString());
-names.remove('Raymond');
-console.log(names.toString());
+
+
+
+// iterating through a list
+for (names.front(); names.currPos() < names.length(); names.next()) {
+  console.log(names.getElement());
+}
+
+for (names.end(); names.currPos() >= 0; names.prev()) {
+  console.log(names.getElement());
+
+  if (names.currPos() === 0) {
+    break;
+  }
+}
 
