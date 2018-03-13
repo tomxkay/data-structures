@@ -17,4 +17,4 @@ function mulBase(num, base) {
 }
 
 
-console.log(mulBase(1500, 8));
+console.log(mulBase(127, 8)); // 177
